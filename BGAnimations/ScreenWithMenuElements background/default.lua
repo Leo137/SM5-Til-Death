@@ -10,7 +10,7 @@ t[#t+1] = Def.ActorFrame {
 		 self:scaletoclipped(SCREEN_WIDTH,SCREEN_HEIGHT)
 		end;
 		OnCommand=function(self)
-		 self:diffuse(color("#FFCB05")):diffusebottomedge(color("#F0BA00"))
+		 self:diffuse(getMainColor('positive')):diffusebottomedge(getMainColor('positive')):diffusealpha(0.4)
 		end;
 	};
 	Def.ActorFrame {
@@ -19,7 +19,7 @@ t[#t+1] = Def.ActorFrame {
 			 self:hide_if(hideFancyElements):rotationy(-12.25):rotationz(-30):rotationx(-20):zoomto(SCREEN_WIDTH*2,SCREEN_HEIGHT*2):customtexturerect(0,0,SCREEN_WIDTH*4/256,SCREEN_HEIGHT*4/256)
 			end;
 			OnCommand=function(self)
-			 self:texcoordvelocity(0.125,0.5):diffuse(color("#ffd400")):diffusealpha(0.045):bob():effectmagnitude(0,0,35):effectperiod(4):diffusealpha(0.045)
+			 self:texcoordvelocity(0.125,0.5):diffuse(getMainColor('positive')):diffusealpha(0.045):bob():effectmagnitude(0,0,35):effectperiod(4):diffusealpha(0.045)
 			end;
 		};
 	};
@@ -39,7 +39,7 @@ t[#t+1] = Def.ActorFrame {
 		 self:vertalign(top):scaletoclipped(SCREEN_WIDTH+1,80):y(-SCREEN_CENTER_Y+20):fadebottom(0.75)
 		end;
 		OnCommand=function(self)
-		 self:diffuse(color("#FFCB05"))
+		 self:diffuse(getMainColor('positive')):diffusealpha(0.001)
 		end;
 	};
 	Def.Quad {
@@ -47,7 +47,7 @@ t[#t+1] = Def.ActorFrame {
 		 self:vertalign(bottom):scaletoclipped(SCREEN_WIDTH+1,80):y(SCREEN_CENTER_Y-20):fadetop(0.75)
 		end;
 		OnCommand=function(self)
-		 self:diffuse(color("#FFCB05"))
+		 self:diffuse(getMainColor('positive')):diffusealpha(0.001)
 		end;
 	};
 --[[ 	LoadActor("_pattern") .. {
@@ -67,11 +67,6 @@ t[#t+1] = Def.ActorFrame {
 		end;
 		effectcolor2,Color("Orange");effectcolor1,Color.Alpha(Color("Orange"),0.45);fadebottom,0.25;fadetop,0.25;croptop,48/480;cropbottom,48/480);
 	}; --]]
-	LoadActor("_bg top") .. {
-		InitCommand=function(self)
-		 self:scaletoclipped(SCREEN_WIDTH+1,SCREEN_HEIGHT)
-		end;
-	};
 };
 
 return t;
