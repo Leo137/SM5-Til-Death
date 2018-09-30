@@ -772,5 +772,4 @@ t[#t+1] = LoadFont("Common Large") .. {
 	end,
 }
 
-
 return t

@@ -142,7 +142,7 @@ t[#t+1] = Def.Quad{
 		self:xy(0,0):halign(0):valign(0):zoomto(SCREEN_WIDTH,topFrameHeight):diffuse(getMainColor('frames')):draworder(-41)
 	end;
 };
---FrameBorders
+-- --FrameBorders
 t[#t+1] = Def.Quad{
 	InitCommand=function(self)
 		self:xy(0,topFrameHeight):halign(0):valign(1):zoomto(SCREEN_WIDTH,borderWidth):diffuse(getMainColor('highlight')):diffusealpha(0.5):draworder(-41)
@@ -150,4 +150,5 @@ t[#t+1] = Def.Quad{
 };
 
 -- t[#t+1] = LoadActor("../_mousewheelscroll")
+t[#t+1] = LoadActor("../_songpath")
 return t

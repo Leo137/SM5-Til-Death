@@ -204,9 +204,9 @@ local t = Def.ActorFrame{
 
 	InitCommand=function(self)
 		if IsUsingWideScreen() then
-			self:xy(SCREEN_CENTER_X*2 - (SCREEN_WIDTH*0.3) + 28 + 10, SCREEN_TOP);
+			self:xy(SCREEN_CENTER_X*2 - (SCREEN_WIDTH*0.3) + 28 + 10, SCREEN_TOP + 7);
 		else
-			self:xy(SCREEN_CENTER_X*2 - (SCREEN_WIDTH*0.3) + 28 - 20, SCREEN_TOP);
+			self:xy(SCREEN_CENTER_X*2 - (SCREEN_WIDTH*0.3) + 28 - 20, SCREEN_TOP + 7);
 		end;
 		
 		self:addy(-60);
