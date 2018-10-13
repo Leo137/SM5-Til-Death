@@ -2,6 +2,7 @@ local t = Def.ActorFrame{}
 
 colorConfig:load()
 
+
 t[#t+1] = LoadActor("wifetwirl")
 t[#t+1] = LoadActor("msd")
 t[#t+1] = LoadActor("songsearch")

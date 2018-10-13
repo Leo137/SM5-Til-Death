@@ -35,8 +35,8 @@ t[#t+1] = Def.Actor{
 	end
 }
 
-t[#t+1] = LoadActor("../_frame")
-t[#t+1] = LoadActor("../_PlayerInfo")
+t[#t+1] = LoadActor("../_Condensedframe")
+t[#t+1] = LoadActor("../_CondensedPlayerInfo")
 -- t[#t+1] = LoadActor("currentsort")
 t[#t+1] = LoadFont("Common Large")..{
 	InitCommand=function(self)
@@ -47,7 +47,12 @@ t[#t+1] = LoadFont("Common Large")..{
 t[#t+1] = LoadActor("../searchbar")
 t[#t+1] = LoadActor("../_cursor")
 t[#t+1] = LoadActor("../_halppls")
-t[#t+1] = LoadActor("currenttime")
+t[#t+1] = LoadActor("currenttime")..{
+	InitCommand=function(self)
+		self:xy(-200, 0)
+	end;
+}
+
 t[#t+1] = LoadActor("cdtitle")
 
 GAMESTATE:UpdateDiscordMenu(GetPlayerOrMachineProfile(PLAYER_1):GetDisplayName() .. ": " .. string.format("%5.2f", GetPlayerOrMachineProfile(PLAYER_1):GetPlayerRating()))
