@@ -42,7 +42,7 @@ t[#t+1] = LoadFont("Common Normal")..{
 -- Rate String
 t[#t+1] = LoadFont("Common normal")..{
 	InitCommand=function(self)
-		self:xy(SCREEN_CENTER_X,capWideScale(155,170)):zoom(0.5):halign(0.5)
+		self:xy(SCREEN_CENTER_X-320, capWideScale(155, 50)):zoom(0.5):halign(0.5)
 	end,
 	BeginCommand=function(self)
 		if getCurRateString() == "1x" then
@@ -67,7 +67,7 @@ local function GraphDisplay( pn )
 				self:diffusealpha(0.7)
 				self:GetChild("Line"):diffusealpha(0)
 				self:zoom(0.8)
-				self:xy(-22,8)
+				self:xy(-40, 270) -- self:xy(-22,8)
 			end
 		}
 	}
@@ -84,7 +84,7 @@ local function ComboGraph( pn )
 				local ss = SCREENMAN:GetTopScreen():GetStageStats()
 				self:Set( ss, ss:GetPlayerStageStats(pn) )
 				self:zoom(0.8)
-				self:xy(-22,-2)
+				self:xy(-40, 240) --self:xy(-22, -2)
 			end
 		}
 	}
