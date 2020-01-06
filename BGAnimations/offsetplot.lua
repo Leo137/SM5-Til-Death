@@ -45,6 +45,10 @@ local o = Def.ActorFrame{
 		
 		-- being explicit about the logic since atm these are the only 2 cases we handle
 		if SCREENMAN:GetTopScreen():GetName() == "ScreenEvaluationNormal" then		-- default case, all data is in pss and no disk load is required
+			plotWidth = SCREEN_WIDTH-222
+			plotHeight = 70
+			self:xy(SCREEN_WIDTH / 2 + 111, plotY + 25)
+			
 			local pss = STATSMAN:GetCurStageStats():GetPlayerStageStats(PLAYER_1)
 			dvt = pss:GetOffsetVector()
 			nrt = pss:GetNoteRowVector()

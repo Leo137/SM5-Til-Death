@@ -228,4 +228,16 @@ t[#t+1] = Def.ActorFrame {
 --  end;
 
 
+-- t[#t+1] = Def.Quad{
+--     InitCommand = function(self)
+--         self:stretchto(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT):diffusealpha(0):rainbow()
+--     end,
+--     JudgmentMessageCommand = function(self, param)
+--         self:finishtweening()
+--         self:diffusealpha(0.9)
+--         self:linear(0.1)
+--         self:diffusealpha(0)
+--     end
+-- }
+
 return t

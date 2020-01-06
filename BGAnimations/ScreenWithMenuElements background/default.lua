@@ -10,7 +10,7 @@ t[#t+1] = Def.ActorFrame {
 		 self:scaletoclipped(SCREEN_WIDTH,SCREEN_HEIGHT)
 		end;
 		OnCommand=function(self)
-		 self:diffuse(getMainColor('positive')):diffusebottomedge(getMainColor('positive')):diffusealpha(0.4)
+		 self:diffuse(getMainColor('positive')):diffusebottomedge(getMainColor('positive')):diffusealpha(0.0)
 		end;
 	};
 	Def.ActorFrame {
@@ -19,7 +19,7 @@ t[#t+1] = Def.ActorFrame {
 			 self:hide_if(hideFancyElements):rotationy(-12.25):rotationz(-30):rotationx(-20):zoomto(SCREEN_WIDTH*2,SCREEN_HEIGHT*2):customtexturerect(0,0,SCREEN_WIDTH*4/256,SCREEN_HEIGHT*4/256)
 			end;
 			OnCommand=function(self)
-			 self:texcoordvelocity(0.125,0.5):diffuse(getMainColor('positive')):diffusealpha(0.045):bob():effectmagnitude(0,0,35):effectperiod(4):diffusealpha(0.045)
+			 self:texcoordvelocity(0.125,0.5):diffuse(getMainColor('positive')):diffusealpha(0.045):bob():effectmagnitude(0,0,35):effectperiod(8):diffusealpha(0.025)
 			end;
 		};
 	};
@@ -34,22 +34,7 @@ t[#t+1] = Def.ActorFrame {
 		end;
 	}; --]]
 
-	Def.Quad {
-		InitCommand=function(self)
-		 self:vertalign(top):scaletoclipped(SCREEN_WIDTH+1,80):y(-SCREEN_CENTER_Y+20):fadebottom(0.75)
-		end;
-		OnCommand=function(self)
-		 self:diffuse(getMainColor('positive')):diffusealpha(0.001)
-		end;
-	};
-	Def.Quad {
-		InitCommand=function(self)
-		 self:vertalign(bottom):scaletoclipped(SCREEN_WIDTH+1,80):y(SCREEN_CENTER_Y-20):fadetop(0.75)
-		end;
-		OnCommand=function(self)
-		 self:diffuse(getMainColor('positive')):diffusealpha(0.001)
-		end;
-	};
+
 --[[ 	LoadActor("_pattern") .. {
 		InitCommand=function(self)
 		 self:z(32):x(4):y(4):rotationy(-12.25):rotationz(-30):rotationx(-20):zoomto(SCREEN_WIDTH*2,SCREEN_HEIGHT*2):customtexturerect(0,0,SCREEN_WIDTH*4/256,SCREEN_HEIGHT*4/256)
